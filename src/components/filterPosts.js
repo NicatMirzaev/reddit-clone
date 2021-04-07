@@ -7,9 +7,6 @@ import TopIcon from '../icons/top.svg';
 import MenuIcon from '../icons/menu.svg';
 
 const Container = styled.div `
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1020px;
   padding: 10px;
 `
 const HeaderText = styled.p `

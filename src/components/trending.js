@@ -22,6 +22,7 @@ const Trends = styled.div `
   overflow-x: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+
 `
 const Card = styled.div `
   display: flex;
