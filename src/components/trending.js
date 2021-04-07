@@ -19,9 +19,6 @@ const Trends = styled.div `
   display: flex;
   align-items: center;
   width: 100%;
-  overflow-x: scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
 
 `
 const Card = styled.div `
@@ -37,6 +34,10 @@ const Card = styled.div `
   cursor: pointer;
   justify-content: flex-end;
   background: linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.3), rgba(0,0,0,0.4), rgba(0,0,0,0.6), rgba(0,0,0,0.8), #000000 ), url(${props => props.url}) center center / cover no-repeat rgb(255, 255, 255);
+
+  @media (max-width: ${props => props.maxWidth}) {
+    display: none;
+  }
 `
 const CardHeader = styled.p `
   font-family: 'IBM Plex Sans', Arial, sans-serif;
@@ -75,7 +76,7 @@ const Trending = () => {
       <TrendContainer>
         <TrendingToday>Trending today</TrendingToday>
         <Trends>
-          <Card url="https://external-preview.redd.it/iCyCAoc0yvIxFzxQJkvP3kMih8j189IfsE2PuD96oD8.png?format=pjpg&auto=webp&s=c86d18db4efa00c734f77bfe534e314a58416b4c">
+          <Card maxWidth="10px" url="https://external-preview.redd.it/iCyCAoc0yvIxFzxQJkvP3kMih8j189IfsE2PuD96oD8.png?format=pjpg&auto=webp&s=c86d18db4efa00c734f77bfe534e314a58416b4c">
             <CardHeader>Suez Canal</CardHeader>
             <CardContent>Meanwhile in the Suaz Canal</CardContent>
             <CardFooter>
@@ -83,7 +84,7 @@ const Trending = () => {
               <FooterText>r/funny and more</FooterText>
             </CardFooter>
           </Card>
-          <Card url="https://external-preview.redd.it/za8Rp7TELwWu1jOgjYyFFULNEpwuArVZBfBZY9uzhD8.jpg?auto=webp&s=910857f19b3929a574494c1f31189d763732b9f1">
+          <Card maxWidth="500px" url="https://external-preview.redd.it/za8Rp7TELwWu1jOgjYyFFULNEpwuArVZBfBZY9uzhD8.jpg?auto=webp&s=910857f19b3929a574494c1f31189d763732b9f1">
             <CardHeader>Sidney Powell</CardHeader>
             <CardContent>Sidney Powell's defense in defamation suit could put her in..</CardContent>
             <CardFooter>
@@ -91,11 +92,11 @@ const Trending = () => {
               <FooterText>r/politics and more</FooterText>
             </CardFooter>
           </Card>
-          <Card url="https://external-preview.redd.it/OGvGiQOttC0XPjH2CkT4tEVRJMDrZ5wewsMpaUa-6hI.jpg?auto=webp&s=8b9e5f3f7c415e2f554f10acf9974cd3e37eb0fe">
+          <Card maxWidth="750px" url="https://external-preview.redd.it/OGvGiQOttC0XPjH2CkT4tEVRJMDrZ5wewsMpaUa-6hI.jpg?auto=webp&s=8b9e5f3f7c415e2f554f10acf9974cd3e37eb0fe">
             <CardHeader>Astrazeneca</CardHeader>
             <CardContent>Canada adds blood clot warning to AstraZeneca's COVID-19..</CardContent>
           </Card>
-          <Card url="https://external-preview.redd.it/Zo2CcgYQpgcQ1U8beqPVbLh3fpUKJEipKLcv5nVnXWk.jpg?auto=webp&s=bd25f99d9a46336885013fb7be9df50dea4111e7">
+          <Card maxWidth="1000px" url="https://external-preview.redd.it/Zo2CcgYQpgcQ1U8beqPVbLh3fpUKJEipKLcv5nVnXWk.jpg?auto=webp&s=bd25f99d9a46336885013fb7be9df50dea4111e7">
             <CardHeader>Pfizer</CardHeader>
             <CardContent>Pfizer is now testing a COVID-19 pill</CardContent>
           </Card>

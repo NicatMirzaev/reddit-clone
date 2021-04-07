@@ -26,6 +26,10 @@ const PostSide = styled.div `
   flex-direction: column;
   background-color: #f8f9fa;
   padding: 12px 8px;
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 `
 const PostHeader = styled.div `
   display: flex;
@@ -65,6 +69,10 @@ const JoinButton = styled.div `
   border-radius: 9999px;
   border: none;
   background-color: #0079d3;
+
+  @media (max-width: 453px) {
+    width: 29px;
+  }
 `
 const JoinText = styled.span `
   font-family: 'IBM Plex Sans', Arial, sans-serif;
@@ -72,6 +80,10 @@ const JoinText = styled.span `
   font-weight: 700;
   line-height: 20px;
   color: white;
+
+  @media (max-width: 453px) {
+    display: none;
+  }
 `
 const PostContent = styled.div `
   display: flex;
@@ -118,7 +130,7 @@ const Post = props => {
       </PostSide>
       <div style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
         <PostHeader>
-          <div style={{display: 'flex', alignItems: 'center'}}>
+          <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap'}}>
             <img style={{backgroundColor: 'rgb(0, 121, 211);', border: '1px solid #edeff1;', height: '16px', width: '16px', borderRadius: '9001px', marginRight: '8px'}} alt="Subreddit Icon" role="presentation" src={data.redditImage}/>
             <RedditText>{data.reddit}</RedditText>
             <PostedBy>Posted by {data.postedBy} {data.ago} ago</PostedBy>
@@ -130,6 +142,9 @@ const Post = props => {
         </PostHeader>
         <PostContent>
           <PostText>{data.content}</PostText>
+          {data.contentImage.length > 0 &&
+            <img style={{marginTop: '5px', maxHeight: '512px', maxWidth: '100%'}} src={data.contentImage} alt="content"/>
+          }
         </PostContent>
         <PostFooter>
           <FooterOption>
