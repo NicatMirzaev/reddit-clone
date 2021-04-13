@@ -7,6 +7,10 @@ const Container = styled.div `
   flex-direction: column;
   max-width: 660px;
   padding: 10px;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
 `
 const Posts = props => {
   return (

@@ -27,6 +27,10 @@ const Filter = styled.div `
   max-width: 640px;
   border: 1px solid #ccc;
   background-color: white;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
 `
 const Flex = styled.div `
   display: flex;

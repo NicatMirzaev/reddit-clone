@@ -2,7 +2,8 @@ import Header from './components/header';
 import Trending from './components/trending';
 import FilterPosts from './components/filterPosts';
 import Posts from './components/posts';
-
+import TopCommunities from './components/topCommunities';
+import styled from 'styled-components';
 const posts = [
   {
     likes: '27.7k',
@@ -25,16 +26,30 @@ const posts = [
     comments: '1.0k'
   }
 ]
+const SideContent = styled.div `
+  display: flex;
+  flex-direction: column;
+  margin-top: 37px;
+  margin-right: 10px;
+  width: 310px;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+`
 function App() {
   return (
     <div style={{width: '100%', height: '100%'}}>
       <Header/>
       <Trending/>
       <div style={{display: 'flex', maxWidth: '1020px', height: '100%', marginLeft: 'auto', marginRight: 'auto'}}>
-        <div style={{display: 'flex', width: '100%', height: '100%', flexDirection: 'column'}}>
+        <div style={{display: 'flex', marginRight: '27px', height: '100%', flexDirection: 'column'}}>
           <FilterPosts/>
           <Posts data={posts}/>
         </div>
+        <SideContent>
+          <TopCommunities/>
+        </SideContent>
       </div>
     </div>
   );
