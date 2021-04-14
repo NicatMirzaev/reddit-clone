@@ -10,6 +10,7 @@ const Container = styled.div `
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 15px;
 `
 const Header = styled.div `
   width: 100%;

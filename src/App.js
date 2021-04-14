@@ -3,6 +3,7 @@ import Trending from './components/trending';
 import FilterPosts from './components/filterPosts';
 import Posts from './components/posts';
 import TopCommunities from './components/topCommunities';
+import RedditPremium from './components/reddit-premium';
 import styled from 'styled-components';
 const posts = [
   {
@@ -49,6 +50,7 @@ function App() {
         </div>
         <SideContent>
           <TopCommunities/>
+          <RedditPremium/>
         </SideContent>
       </div>
     </div>
