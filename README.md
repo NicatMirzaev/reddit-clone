@@ -1,4 +1,4 @@
-#Demo
+# Demo
 Demo link: https://reddit-ui-clone.herokuapp.com/
 
 # Getting Started with Create React App
