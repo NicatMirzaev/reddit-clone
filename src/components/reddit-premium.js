@@ -11,6 +11,7 @@ const Container = styled.div `
   align-items: center;
   padding: 8px 12px;
   background-color: white;
+  margin-bottom: 15px;
 `
 const TextWrapper = styled.div `
   display: flex;
